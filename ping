@@ -1,5 +1,5 @@
 #!/bin/sh
 
-echo ping ${PINGHOST:=kubernetes.default.svc.cluster.local} every ${TIMEOUT:=2} sec
+echo ping ${PINGHOST:=kubernetes.default.svc.cluster.local} every ${TIMEOUT:=1} sec
 
 while true; do ping -c 1 ${PINGHOST}; sleep ${TIMEOUT}; done;
